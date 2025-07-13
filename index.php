@@ -10,10 +10,9 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
     <style>
         body {
-            background: #f4f6f8;
+            background: #fff;
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -132,8 +131,15 @@ if (!isset($_SESSION['user_id'])) {
         .tile5 { background: #2a9d8f; }
     
         @media (max-width: 768px) {
-            .menu {
-                grid-template-columns: repeat(2, 1fr);
+            .menu, .menus {
+                grid-template-columns: 1fr;
+            }
+            .tile, .tiled {
+                aspect-ratio: 2/1;
+                width: 100%;
+                font-size: 0.95rem;
+                height: auto;
+                min-width: 0;
             }
         }
     </style>
